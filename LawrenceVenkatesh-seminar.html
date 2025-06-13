@@ -54,6 +54,7 @@
             border-collapse: collapse;
             width: 85%;
             margin: 20px auto;
+            font-size: 0.9em;
         }
         
         th, td {
@@ -83,6 +84,83 @@
         .seminar-image[src$=".pdf"] {
             filter: var(--image-filter) brightness(1.1) contrast(1.1);
         }
+
+        /* Mobile Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                font-size: 0.9em;
+                margin: 20px auto;
+                padding: 0 15px;
+            }
+
+            h1 {
+                font-size: 1.4em;
+            }
+
+            h2 {
+                font-size: 1.1em;
+            }
+
+            h3 {
+                font-size: 1.3em;
+            }
+
+            table {
+                width: 100%;
+                font-size: 0.85em;
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+
+            th, td {
+                padding: 6px;
+                min-width: 80px; /* Ensure minimum width for readability */
+            }
+
+            .seminar-image {
+                width: 100% !important;
+                height: auto !important;
+                margin: 10px 0;
+            }
+
+            .theme-toggle {
+                top: 10px;
+                right: 10px;
+                padding: 6px 12px;
+                font-size: 0.8em;
+            }
+        }
+
+        /* Small Mobile Devices */
+        @media (max-width: 480px) {
+            body {
+                font-size: 1em;
+                margin: 15px auto;
+                padding: 0 10px;
+            }
+
+            table {
+                font-size: 0.8em;
+            }
+
+            th, td {
+                padding: 4px;
+                min-width: 60px;
+            }
+
+            h1 {
+                font-size: 1.3em;
+            }
+
+            h2 {
+                font-size: 1em;
+            }
+
+            h3 {
+                font-size: 1.2em;
+            }
+        }
     </style>
 </head>
 <body>
@@ -95,7 +173,7 @@
     The seminar is organised by Paolo Bordignon, Alexander Molyakov, Felix Kalker and Victor de Vries.
     </p>
     <div style="text-align: center">
-        <img src="images/monodromy-LW.pdf" class="seminar-image" width="42%" height="42%" alt="Monodromy diagram">
+        <img src="images/monodromy-LW.pdf" class="seminar-image" alt="Monodromy diagram">
     </div>
 
     <h2> Baby Talks on Cohomologies</h2>

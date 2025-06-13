@@ -58,11 +58,123 @@
             text-align: center;
             color: var(--text-color);
         }
+
+        /* Mobile Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                font-size: 0.9em;
+                margin: 20px auto;
+                padding: 0 15px;
+            }
+
+            h1 {
+                font-size: 1.4em;
+            }
+
+            h2 {
+                font-size: 1.1em;
+            }
+
+            .profile-picture {
+                float: none !important;
+                width: 200px !important;
+                height: auto !important;
+                margin: 20px auto;
+                display: block;
+            }
+
+            .section {
+                margin-bottom: 20px;
+            }
+
+            ul {
+                padding-left: 20px;
+            }
+
+            li {
+                margin-bottom: 8px;
+            }
+
+            .theme-toggle {
+                top: 10px;
+                right: 10px;
+                padding: 6px 12px;
+                font-size: 0.8em;
+            }
+
+            img {
+                float: none !important;
+                width: 100% !important;
+                height: auto !important;
+                margin: 20px 0;
+            }
+        }
+
+        /* Small Mobile Devices */
+        @media (max-width: 480px) {
+            body {
+                font-size: 1em;
+                margin: 15px auto;
+                padding: 0 10px;
+            }
+
+            h1 {
+                font-size: 1.3em;
+            }
+
+            h2 {
+                font-size: 1em;
+            }
+
+            .profile-picture {
+                width: 150px !important;
+            }
+
+            .section {
+                margin-bottom: 15px;
+            }
+
+            ul {
+                padding-left: 15px;
+            }
+
+            li {
+                margin-bottom: 6px;
+            }
+
+            footer {
+                margin-top: 30px;
+                padding-top: 15px;
+                font-size: 0.9em;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                font-size: 12pt;
+                margin: 0;
+                padding: 20px;
+            }
+
+            .theme-toggle {
+                display: none;
+            }
+
+            a {
+                color: #000;
+                text-decoration: none;
+            }
+
+            img {
+                max-width: 100%;
+                page-break-inside: avoid;
+            }
+        }
     </style>
 </head>
 <body>
     <button class="theme-toggle" aria-label="Toggle dark mode">Light</button>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
     
     <header>
         <h1>Paolo Bordignon</h1>
