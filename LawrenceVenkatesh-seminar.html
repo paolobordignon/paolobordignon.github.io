@@ -6,58 +6,97 @@
     <title>Seminar Faltings-Lawrence-Venkatesh</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Gentium Basic' rel='stylesheet'>
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="styles/theme.css">
     <script id="MathJax-script" async
           src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
     <style>
         body {
-            font-family: 'Gentium Basic';
+            font-family: 'Gentium Basic', serif;
             font-size: 0.8em;
             max-width: 1000px;
             margin: 40px auto;
             padding: 0 20px;
-            background-color: #ffffff;
-            color: #3c3c3c;
             line-height: 1.6;
         }
         h1 {
             font-size: 1.6em;
             margin-bottom: 0;
-            color: #6a2020;
+            color: var(--primary-color);
         }
         h2 {
             font-size: 1.2em;
             margin-top: 1.5em;
-            color: #6a2020;
+            color: var(--primary-color);
         }
         h3 {
             font-size: 1.6em;
             margin-top: 1.5em;
-            color: #6a2020;
+            color: var(--primary-color);
             text-align: center
         }
         a {
-            color: #6a2020;
+            color: var(--primary-color);
             text-decoration: none;
+            transition: color 0.3s ease;
         }
-        a:hover {
+        a:hover, a:focus {
             text-decoration: underline;
+            color: #8a3030;
         }
         .section {
             margin-bottom: 30px;
         }
         
+        /* Table styling */
+        table {
+            border-collapse: collapse;
+            width: 85%;
+            margin: 20px auto;
+        }
+        
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        th {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        tr:hover {
+            background-color: var(--section-background);
+        }
+
+        /* Image styling */
+        .seminar-image {
+            max-width: 100%;
+            height: auto;
+            filter: var(--image-filter);
+            transition: filter 0.3s ease;
+        }
+
+        /* Specific handling for PDF images */
+        .seminar-image[src$=".pdf"] {
+            filter: var(--image-filter) brightness(1.1) contrast(1.1);
+        }
     </style>
 </head>
 <body>
-<h3>Seminar on Faltings-Lawrence-Venkatesh methods</h3>
-<p>
-The following page contains the information for a running seminar in Fall 2025 in Leiden on Faltings-Lawrence-Venkatesh machinery <a href="https://arxiv.org/abs/1807.02721">[LV20]</a>.
-<br>
-The seminar is organised by Paolo Bordignon, Alexander Molyakov, Felix Kalker and Victor de Vries.
-</p>
-<div style="text-align: center"><img src="images/monodromy-LW.pdf"
-    width="42%" height="42%"></div>
+    <button class="theme-toggle" aria-label="Toggle dark mode">Light</button>
+    
+    <h3>Seminar on Faltings-Lawrence-Venkatesh methods</h3>
+    <p>
+    The following page contains the information for a running seminar in Fall 2025 in Leiden on Faltings-Lawrence-Venkatesh machinery <a href="https://arxiv.org/abs/1807.02721">[LV20]</a>.
+    <br>
+    The seminar is organised by Paolo Bordignon, Alexander Molyakov, Felix Kalker and Victor de Vries.
+    </p>
+    <div style="text-align: center">
+        <img src="images/monodromy-LW.pdf" class="seminar-image" width="42%" height="42%" alt="Monodromy diagram">
+    </div>
 
     <h2> Baby Talks on Cohomologies</h2>
     This is a list of the 15 topics for the <strong> study group</strong> in preparation to the research seminar. Every talk should last between 90 and 120 minutes with a small break in the middle. We strongly encourage each speaker to provide examples and explicit computations.
@@ -332,5 +371,7 @@ The <strong> research seminar</strong> on Lawrence-Venkatesh methods will run la
         </li>
 </ul>
 
+    <!-- Theme JS -->
+    <script src="js/theme.js"></script>
 </body>
 </html>

@@ -1,0 +1,76 @@
+:root {
+    --primary-color: #6a2020;
+    --text-color: #3c3c3c;
+    --background-color: #ffffff;
+    --section-background: #ffffff;
+    --border-color: #eee;
+    --image-filter: none;
+}
+
+[data-theme="dark"] {
+    --primary-color: #ff6b6b;
+    --text-color: #e0e0e0;
+    --background-color: #000000;
+    --section-background: #2d2d2d;
+    --border-color: #404040;
+    --image-filter: invert(1) hue-rotate(180deg);
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.theme-toggle:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+/* Image handling */
+img {
+    max-width: 100%;
+    height: auto;
+    filter: var(--image-filter);
+    transition: filter 0.3s ease;
+}
+
+/* Specific handling for PDF images */
+img[src$=".pdf"] {
+    filter: var(--image-filter) brightness(1.1) contrast(1.1);
+}
+
+/* Specific handling for JPEG images */
+img[src$=".jpeg"], img[src$=".jpg"] {
+    filter: var(--image-filter) brightness(1.2);
+}
+
+/* Exclude profile picture from dark mode filter */
+.profile-picture {
+    filter: none !important;
+}
+
+/* Math styling */
+.katex {
+    font-size: 1.1em;
+}
+
+[data-theme="dark"] .katex {
+    color: var(--text-color);
+} 
