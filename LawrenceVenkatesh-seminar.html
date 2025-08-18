@@ -85,6 +85,11 @@
             filter: var(--image-filter) brightness(1.1) contrast(1.1);
         }
 
+        /* Dark/thick separator for group starts */
+        table tr.group-start td {
+          border-top: 1.5px solid #333; /* darker line; adjust color/width as desired */
+        }
+
         /* Mobile Responsive Design */
         @media (max-width: 768px) {
             body {
@@ -185,126 +190,106 @@
             <col style="width:8%">
             <col style="width:28%">
             <col style="width:60%">
-          </colgroup><tbody><tr>
+          </colgroup><tbody><tr class="group-start">
             <th><p >Date</p></th>
             <th><p >Time</p></th>
             <th><p >Room</p></th>
             <th>Speaker</th>
             <th>Topic</th>
-        <tr>
+        <tr class="group-start">
+          <td>15 September</td>
           <td>-</td>
           <td>-</td>
-          <td>-</td>
-          <td>-</td>
+          <td>Victor</td>
           <td>Introduction: Zeta function and Weil Cohomologies</td>
         </tr>
-        <tr>
-            <td>-</td>
+
+        <tr class="group-start">
+            <td>22 September</td>
           <td>-</td>
           <td>-</td>
-          <td>-</td>
-            <td>&Eacute;tale cohomology I</td>
+          <td>Alexander</td>
+            <td>&Eacute;tale cohomology I: &Eacute;tale morphisms and Fundamental groups</td>
         </tr>
         <tr>
-            <td>-</td>
+            <td>29 September</td>
           <td>-</td>
           <td>-</td>
-          <td>-</td>
-            <td>&Eacute;tale cohomology II</td>
+          <td>Felix</td>
+            <td>&Eacute;tale cohomology II: &Eacute;tale site and cohomology of sheaves</td>
         </tr>
         <tr>
-            <td>-</td>
+            <td>6 October</td>
           <td>-</td>
           <td>-</td>
-          <td>-</td>
-            <td>&Eacute;tale cohomology III</td>
+          <td>Paolo</td>
+            <td>Spectral sequences</td>
         </tr>
         <tr>
-          <td>-</td>
+          <td>13 October</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+          <td>&Eacute;tale cohomology III: proper and smooth base change </td>
+      </tr>
+        <tr>
+          <td>20 October</td>
         <td>-</td>
         <td>-</td>
         <td>-</td>
           <td>&Eacute;tale cohomology IV</td>
-      </tr>
-        <tr>
-            <td>-</td>
-          <td>-</td>
-          <td>-</td>
-          <td>-</td>
-            <td>Spectral sequences</td>
-        </tr>
-        <tr>
-          <td>-</td>
+      <tr class="group-start">
+          <td>27 October</td>
         <td>-</td>
         <td>-</td>
         <td>-</td>
-          <td>&Eacute;tale cohomology V</td>
+          <td>Algebraic de Rham cohomology: absolute and relative</td>
       </tr>
       <tr>
-          <td>-</td>
+          <td>3 November</td>
         <td>-</td>
         <td>-</td>
         <td>-</td>
-          <td>&Eacute;tale cohomology VI</td>
+          <td>Crystalline cohomology I : Crystalline site</td>
       </tr>
       <tr>
-          <td>-</td>
+        <td>10 November</td>
         <td>-</td>
         <td>-</td>
         <td>-</td>
-          <td>&Eacute;tale cohomology VII</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-        <td>Galois representations I</td>
+        <td>Crystalline cohomology II : Crystalline cohomology and de Rham-Witt sequences</td>
     </tr>
         <tr>
-            <td>-</td>
+            <td>17 November</td>
           <td>-</td>
           <td>-</td>
           <td>-</td>
-            <td>de Rham cohomology I</td>
+            <td>Crystalline cohomology III : Frobenius and F-isocrystals </td>
+        </tr>
+        <tr class="group-start">
+            <td>24 November</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+            <td>Towards \(p\)-adic Hodge Theory: \(p\)-divisible groups and Hodge-Tate maps</td>
         </tr>
         <tr>
-            <td>-</td>
+            <td>1 December</td>
           <td>-</td>
           <td>-</td>
           <td>-</td>
-            <td>de Rham cohomology II</td>
+            <td>Towards \(p\)-adic Hodge Theory: Comparison Theorems</td>
         </tr>
         <tr>
-            <td>-</td>
+            <td>8 December</td>
           <td>-</td>
           <td>-</td>
           <td>-</td>
-            <td>Rigid Geometry and Cohomology I</td>
+            <td>Towards \(p\)-adic Hodge Theory: p-adic Galois representations</td>
         </tr>
-        <tr>
-            <td>-</td>
-          <td>-</td>
-          <td>-</td>
-          <td>-</td>
-            <td>Rigid Geometry and Cohomology II</td>
-        </tr>
-        <tr>
-            <td>-</td>
-          <td>-</td>
-          <td>-</td>
-          <td>-</td>
-            <td>Crystalline Cohomology I (overview)</td>
-        </tr>
-        <tr>
-            <td>-</td>
-          <td>-</td>
-          <td>-</td>
-          <td>-</td>
-            <td>Conclusion: Comparison Theorems</td>
-        </tr>
+        
     </tbody></table>
-
+<!--
 <h2>Research Talks on Lawrence-Venkatesh paper</h2>
 The <strong> research seminar</strong> on Lawrence-Venkatesh methods will run later in the semester.
  This is a provisory list of topics for the <strong> seminar talks</strong>. Every talk should last around 90 minutes with a small break in the middle.
@@ -406,8 +391,7 @@ The <strong> research seminar</strong> on Lawrence-Venkatesh methods will run la
         <td>Higher dimensions</td>
     </tr>
 </tbody></table> 
-
-
+-->
 
 <h2> Main references</h2>
 <ul>
