@@ -72,6 +72,27 @@
             background-color: var(--section-background);
         }
 
+        /* Back to home button */
+        .back-home {
+            position: fixed;
+            top: 16px;
+            left: 16px;
+            padding: 6px 12px;
+            font-size: 0.9em;
+            background: var(--section-background);
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+            border-radius: 6px;
+            z-index: 1000;
+        }
+
+        .back-home:hover,
+        .back-home:focus {
+            background: var(--primary-color);
+            color: #ffffff;
+            text-decoration: none;
+        }
+
         /* Image styling */
         .seminar-image {
             max-width: 100%;
@@ -135,6 +156,13 @@
                 padding: 6px 12px;
                 font-size: 0.8em;
             }
+
+            .back-home {
+                top: 10px;
+                left: 10px;
+                font-size: 0.8em;
+                padding: 6px 10px;
+            }
         }
 
         /* Small Mobile Devices */
@@ -170,6 +198,7 @@
 </head>
 <body>
     <button class="theme-toggle" aria-label="Toggle dark mode">Light</button>
+    <a class="back-home" href="index.html" aria-label="Back to home">← Home</a>
     
     <h3>Study group on Weil cohomologies</h3>
     <p>
