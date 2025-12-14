@@ -51,6 +51,51 @@
             margin-bottom: 30px;
         }
 
+        /* Navigation bar */
+        .top-nav {
+            position: sticky;
+            top: 0;
+            background: var(--section-background);
+            border-bottom: 2px solid var(--primary-color);
+            padding: 12px 20px;
+            margin: -40px -20px 30px -20px;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            /*
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            */
+        }
+
+        .top-nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .top-nav a:hover,
+        .top-nav a:focus {
+            background: var(--primary-color);
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Offset for fixed header when scrolling */
+        h2[id] {
+            scroll-margin-top: 80px;
+        }
+
         footer {
             margin-top: 40px;
             padding-top: 20px;
@@ -101,7 +146,21 @@
                 padding: 6px 12px;
                 font-size: 0.8em;
             }
-            
+
+            .top-nav {
+                padding: 10px 15px;
+                gap: 10px;
+                margin: -20px -15px 20px -15px;
+            }
+
+            .top-nav a {
+                padding: 5px 10px;
+                font-size: 0.85em;
+            }
+
+            h2[id] {
+                scroll-margin-top: 60px;
+            }
 
             img {
                 float: none !important;
@@ -148,6 +207,21 @@
                 padding-top: 15px;
                 font-size: 0.9em;
             }
+
+            .top-nav {
+                padding: 8px 10px;
+                gap: 8px;
+                margin: -15px -10px 15px -10px;
+            }
+
+            .top-nav a {
+                padding: 4px 8px;
+                font-size: 0.8em;
+            }
+
+            h2[id] {
+                scroll-margin-top: 50px;
+            }
         }
 
         /* Print styles */
@@ -177,6 +251,15 @@
 <body>
     <button class="theme-toggle" aria-label="Toggle dark mode">Light</button>
     
+    <nav class="top-nav">
+        <a href="#about">About</a>
+        <a href="#papers">Papers</a>
+        <a href="#talks">Talks</a>
+        <a href="#seminars">Seminars</a>
+        <a href="#education">Education</a>
+        <a href="#notes">Notes & Code</a>
+    </nav>
+    
     <header>
         <h1>Paolo Bordignon</h1>
         <hr width="25%" color="#6a2020" align="left">
@@ -187,7 +270,7 @@
 
     <main id="main-content">
     <div class="section">
-        <h2>About</h2>
+        <h2 id="about">About</h2>
         <p>I am a PhD student at Leiden University under the supervision of <a href="https://pub.math.leidenuniv.nl/~vonkjb/index.html">Jan Vonk.</a><br>
             My research interest lies in Algebraic Number Theory and Arithmetic Geometry in the broadest sense.<br>
             I am mainly interested in everything that revolves around elliptic curves, modular curves, modular forms and L-functions.
@@ -195,7 +278,7 @@
         </div>
 
     <div class="section">
-        <h2>Papers</h2>
+        <h2 id="papers">Papers</h2>
         <ul>
             <li> <a href => On a cohomological description of congruences between modular forms and elliptic curves </a>(2025, in preparation).
             </li>
@@ -205,7 +288,7 @@
     </div>
 
     <div class="section">
-        <h2>Talks</h2>
+        <h2 id="talks">Talks</h2>
             <ul>
                 <li>Crystalline cohomology I and II - Weil cohomology study group Leiden <a href="https://paolobordignon.github.io/cohomology-seminar.html">(link)</a>
                 <li>\(p\)-adic Modular Forms and their geometry - ALGANT Symposium 2025 <a href="https://paolobordignon.github.io/notes/p_adic_Modular_forms_Talk_SYMPAAN.pdf">(slides)</a>
@@ -215,7 +298,7 @@
 
     <p><img src="images/Chaos 1.pdf" style="float:right;width:35%;height:35%;">
     <div class="section">
-        <h2>Seminars organised</h2>
+        <h2 id="seminars">Seminars organised</h2>
         <ul>
             <!--
             <li>
@@ -234,7 +317,7 @@
     <p>
     
     <div class="section">
-        <h2>Education</h2>
+        <h2 id="education">Education</h2>
         <ul>
             <li>Ph.D. in Mathematics, Leiden University, 2023 - </li>
             <li>M2 in Mathematics, Paris-Saclay Universitè, 2022 - 2023 (ALGANT)</li>
@@ -246,7 +329,7 @@
 
     <p><img src="images/X_0(Np).pdf" style="float:right;width:40%;height:40%;">
     <div class="section">
-        <h2>Notes and code</h2>
+        <h2 id="notes">Notes and code</h2>
 
             Here are some notes I am working on. These are early draft versions, preliminary versions with possible errors. <br>
             Please email me if you spot any errors or mistakes!
@@ -270,12 +353,12 @@
     <img src="images/Chaos 4.pdf" style="float:right;width:30%;height:30%;">
 
     <div class="section">
-        <h2>Community service</h2>
+        <h2 id="service">Community service</h2>
         Peer-reviewed an article for Int. Journal of Number Theory
     <div>
 
     <div class="section">
-        <h2>Teaching assistant</h2>
+        <h2 id="teaching">Teaching assistant</h2>
         <ul>
                 <li>Elliptic Curves Spring 2025 - Utrecht University</li>
                 <li>Analytic Number Theory Fall 2024 - Utrecht University</li>
@@ -285,7 +368,7 @@
     </div>
 
     <div class="section">
-        <h2>Math olympiads</h2>
+        <h2 id="olympiads">Math olympiads</h2>
         <a href="https://scienzaexpress.it/catalogo/algebra/">Algebra - Polinomi, disuguaglianze ed equazioni funzionali</a> (in Italian) by Salvatore Damantino, Paolo Bordignon, Alberto Cagnetta and Alessandro Pecile - Scienza Express 2024
     <div>
     
