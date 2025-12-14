@@ -61,12 +61,28 @@
             margin: -40px -20px 30px -20px;
             z-index: 100;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
+            align-items: center;
             flex-wrap: wrap;
             gap: 15px;
             /*
                 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             */
+        }
+
+        .top-nav h1 {
+            margin: 0;
+            font-size: 1.4em;
+            color: var(--primary-color);
+            flex-shrink: 0;
+        }
+
+        .top-nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: flex-end;
+            flex: 1;
         }
 
         .top-nav a {
@@ -153,6 +169,14 @@
                 margin: -20px -15px 20px -15px;
             }
 
+            .top-nav h1 {
+                font-size: 1.2em;
+            }
+
+            .top-nav-links {
+                gap: 10px;
+            }
+
             .top-nav a {
                 padding: 5px 10px;
                 font-size: 0.85em;
@@ -212,6 +236,18 @@
                 padding: 8px 10px;
                 gap: 8px;
                 margin: -15px -10px 15px -10px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .top-nav h1 {
+                font-size: 1.1em;
+            }
+
+            .top-nav-links {
+                width: 100%;
+                justify-content: flex-start;
+                gap: 8px;
             }
 
             .top-nav a {
@@ -252,20 +288,22 @@
     <button class="theme-toggle" aria-label="Toggle dark mode">Light</button>
     
     <nav class="top-nav">
-        <a href="#about">About</a>
-        <a href="#papers">Papers</a>
-        <a href="#talks">Talks</a>
-        <a href="#seminars">Seminars</a>
-        <a href="#education">Education</a>
-        <a href="#notes">Notes & Code</a>
+        <h1><a href="#">Paolo Bordignon</a></h1>
+        <div class="top-nav-links">
+            <a href="#about">About</a>
+            <a href="#papers">Papers</a>
+            <a href="#talks">Talks</a>
+            <a href="#seminars">Seminars</a>
+            <a href="#education">Education</a>
+            <a href="#notes">Notes & Code</a>
+        </div>
     </nav>
     
     <header>
-        <h1>Paolo Bordignon</h1>
-        <hr width="25%" color="#6a2020" align="left">
         <img src="images/FullSizeRender.jpeg" alt="Paolo Bordignon's portrait" class="profile-picture" style="float:right;width:13%;height:13%;">
         <p>PhD Student at <a href="https://www.universiteitleiden.nl">Leiden University</a><br>
-        Email: p.bordignon(at)math.leidenuniv.nl</p>
+        Email: p.bordignon(at)math.leidenuniv.nl<br>
+        GitHub: <a href="https://github.com/paolobordignon">github.com/paolobordignon</a><br></p>
     </header>
 
     <main id="main-content">
