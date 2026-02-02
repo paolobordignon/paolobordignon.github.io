@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <title>Study group on Gross-Zagier formula</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Gentium Basic' rel='stylesheet'>
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="styles/theme.css">
+    <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <style>
+        body {
+            font-family: 'Gentium Basic', serif;
+            font-size: 0.8em;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            font-size: 1.6em;
+            margin-bottom: 0;
+            color: var(--primary-color);
+        }
+        h2 {
+            font-size: 1.2em;
+            margin-top: 1.5em;
+            color: var(--primary-color);
+        }
+        h3 {
+            font-size: 1.6em;
+            margin-top: 1.5em;
+            color: var(--primary-color);
+            text-align: center
+        }
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover, a:focus {
+            text-decoration: underline;
+            color: #8a3030;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        /* Table styling */
+        table {
+            border-collapse: collapse;
+            width: 85%;
+            margin: 20px auto;
+            font-size: 0.9em;
+        }
+        
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        th {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        tr:hover {
+            background-color: var(--section-background);
+        }
+
+        /* Back to home button */
+        .back-home {
+            position: fixed;
+            top: 16px;
+            left: 16px;
+            padding: 6px 12px;
+            font-size: 0.9em;
+            background: var(--section-background);
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+            border-radius: 6px;
+            z-index: 1000;
+        }
+
+        .back-home:hover,
+        .back-home:focus {
+            background: var(--primary-color);
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        /* Image styling */
+        .seminar-image {
+            max-width: 100%;
+            height: auto;
+            filter: var(--image-filter);
+            transition: filter 0.3s ease;
+        }
+
+        /* Specific handling for PDF images */
+        .seminar-image[src$=".pdf"] {
+            filter: var(--image-filter) brightness(1.1) contrast(1.1);
+        }
+
+        /* Dark/thick separator for group starts */
+        table tr.group-start td {
+          border-top: 1.5px solid #333; /* darker line; adjust color/width as desired */
+        }
+
+        /* Mobile Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                font-size: 0.9em;
+                margin: 20px auto;
+                padding: 0 15px;
+            }
+
+            h1 {
+                font-size: 1.4em;
+            }
+
+            h2 {
+                font-size: 1.1em;
+            }
+
+            h3 {
+                font-size: 1.3em;
+            }
+
+            table {
+                width: 100%;
+                font-size: 0.85em;
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+
+            th, td {
+                padding: 6px;
+                min-width: 80px; /* Ensure minimum width for readability */
+            }
+
+            .seminar-image {
+                width: 100%;
+                height: auto;
+                margin: 10px 0;
+            }
+
+            .theme-toggle {
+                top: 10px;
+                right: 10px;
+                padding: 6px 12px;
+                font-size: 0.8em;
+            }
+
+            .back-home {
+                top: 10px;
+                left: 10px;
+                font-size: 0.8em;
+                padding: 6px 10px;
+            }
+        }
+
+        /* Small Mobile Devices */
+        @media (max-width: 480px) {
+            body {
+                font-size: 1em;
+                margin: 15px auto;
+                padding: 0 10px;
+            }
+
+            table {
+                font-size: 0.8em;
+            }
+
+            th, td {
+                padding: 4px;
+                min-width: 60px;
+            }
+
+            h1 {
+                font-size: 1.3em;
+            }
+
+            h2 {
+                font-size: 1em;
+            }
+
+            h3 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" aria-label="Toggle dark mode">Light</button>
+    <a class="back-home" href="index.html" aria-label="Back to home">← Home</a>
+    
+    <h3>Study group on Gross-Zagier formula</h3>
+    <p>
+    The following page contains the information for a running study group in Spring 2026 in Leiden on the paper <a href="https://wstein.org/papers/bib/Gross-Zagier_Heegner_points_and_derivatives_of_Lseries.pdf">Heegner points and derivatives of \(L\)-series I</a> by Gross and Zagier.
+    <br>
+    The seminar is organised by Paolo Bordignon, Mateo Crabit and Felix Kalker.
+    </p>
+    
+    <div style="text-align: center">
+        <img src="images/GZformula.png" class="seminar-image" alt="Gross-Zagier formula" style="width:25%; height:auto;">
+    </div> 
+<!--
+    <blockquote class="page-quote">
+        <style>
+            .page-quote {
+                color: #9b9595;
+            }
+        </style>
+        <p>“[...] my work consists in deciphering a trilingual
+            text; of each of the three
+            columns I have only disparate fragments; I have
+            some ideas about each of the three languages: but
+            I know as well there are great differences in meaning from one column to another, for which nothing has prepared me in advance.”</p>
+        <cite>— André Weil - March 26, 1940</cite>
+    </blockquote>
+-->
+    <h2> Schedule and topics</h2>
+    This is a list of the 15 topics for the <strong> study group</strong>. Every talk should last between 90 and 120 minutes with a small break in the middle. We strongly encourage each speaker to provide examples and explicit computations.
+    <table id="albums" cellspacing="3" style="width:85%; text-align:left; 
+        font-size:90%; margin-left:auto;margin-right:auto;padding: 5px;">
+            <colgroup><col style="width:10%" align="right">
+            <col style="width:10%">
+            <col style="width:8%">
+            <col style="width:28%">
+            <col style="width:60%">
+          </colgroup><tbody><tr class="group-start">
+            <th><p >Date</p></th>
+            <th><p >Time</p></th>
+            <th><p >Room</p></th>
+            <th>Speaker</th>
+            <th>Topic</th>
+        
+            </tr>
+            <tr>
+                <td>12 February</td>
+                <td>10:00 - 12:00 </td>
+                <td>-</td>
+                <td>Mateo</td>
+                <td>Introduction: Heegner points and the BSD conjecture</td>
+            </tr>
+            <tr>
+                <td>19 February</td>
+                <td>10:00 - 12:00</td>
+                <td>-</td>
+                <td>Paolo</td>
+                <td>Modular curves</td>
+            </tr>
+            <tr>
+                <td>26 February</td>
+                <td>10:00 - 12:00</td>
+                <td>-</td>
+                <td>Felix</td>
+                <td>Complex multiplication and Heegner points</td>
+            </tr>
+            <tr>
+                <td>05 March</td>
+                <td>10:00 - 12:00</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Heights on curves</td>
+            </tr>
+            <tr>
+                <td>12 March</td>
+                <td>10:00 - 12:00</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Non-archimedean local height pairing I</td>
+            </tr>
+            <tr>
+                <td>19 March</td>
+                <td>10:00 - 12:00</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Non-archimedean local height pairing II</td>
+            </tr>
+            <tr>
+                <td>26 March</td>
+                <td>10:00 - 12:00</td>  
+                <td>-</td>
+                <td>-</td>
+                <td>Archimedean local height pairing</td>
+            </tr>
+            <tr>
+                <td>02 April</td>
+                <td>10:00 - 12:00</td>  
+                <td>-</td>
+                <td>-</td>
+                <td>Derivatives of Rankin L-series</td>
+            </tr>
+            <tr>
+                <td>09 April</td>
+                <td>10:00 - 12:00</td>  
+                <td>-</td>
+                <td>-</td>
+                <td>Wrapping up the proof</td>
+            </tr>
+    </tbody></table>
+
+
+<h2> Main references</h2>
+<ul>
+<li> B. Gross, D. Zagier - <a href="https://wstein.org/papers/bib/Gross-Zagier_Heegner_points_and_derivatives_of_Lseries.pdf"> Heegner points and derivatives of \(L\)-series I</a> 
+    </li>
+<li> B. Gross, D. Zagier - <a href="https://wstein.org/papers/bib/Gross-Zagier_Heegner_points_and_derivatives_of_Lseries.pdf"> Heegner points and derivatives of \(L\)-series II</a> 
+    </li>
+<li> B. Gross, D. Zagier - <a href="https://eudml.org/doc/152694"> On singular moduli</a> 
+    </li>
+<li> H. Darmon - <a href="https://www.math.mcgill.ca/darmon/pub/Articles/Research/36.NSF-CBMS/chapter.pdf"> Rational points on modular elliptic curves</a> 
+    </li>
+<li> B. Gross - <a href="https://link.springer.com/chapter/10.1007/978-1-4613-8655-1_14"> Local heights on curves</a> 
+    </li>
+    <li> D. Zagier - <a href="https://pub.math.leidenuniv.nl/~vonkjb/seminars/grosszagier/Zag2.pdf"> L-series and the Green's function of a Modular Curves</a> 
+</ul>
+
+<h2> Seminars on the topic</h2>
+    <ul>
+        <li>
+          <a href="https://math.mit.edu/~vijayrs/GZ/"> MIT seminar </a> (2022)
+        </li>
+        <li>
+            <a href = "https://pub.math.leidenuniv.nl/~vonkjb/seminars/grosszagier/index.html"> Oxford Seminar</a> (2018)
+        </li>
+        <li>
+        <a href = "https://deglise.perso.math.cnrs.fr/en/GrossZagier.html"> ENS Lyon seminar</a> (2025)
+        </li>
+</ul>  
+
+    <!-- Theme JS -->
+    <script src="js/theme.js"></script>
+</body>
+</html>
