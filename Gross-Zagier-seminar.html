@@ -110,6 +110,13 @@
         table tr.group-start td {
           border-top: 1.5px solid #333; /* darker line; adjust color/width as desired */
         }
+        table tr.group-end td {
+          border-bottom: 1.5px solid #333; /* darker line; adjust color/width as desired */
+        }
+        table tr.group-closed td {
+            border-top: 1.5px solid #333; /* darker line; adjust color/width as desired */
+          border-bottom: 1.5px solid #333; /* darker line; adjust color/width as desired */
+        }
 
         /* Mobile Responsive Design */
         @media (max-width: 768px) {
@@ -242,14 +249,14 @@
             <th>Topic</th>
         
             </tr>
-            <tr>
+            <tr class ="group-start">
                 <td>10 February</td>
                 <td>10:00 - 12:00 </td>
                 <td>BW.0.32</td>
                 <td>Mateo</td>
                 <td>Introduction: Heegner points and the BSD conjecture</td>
             </tr>
-            <tr>
+            <tr class ="group-start">
                 <td>17 February</td>
                 <td>10:00 - 12:00</td>
                 <td>BW.2.26</td>
@@ -305,7 +312,7 @@
                 <td>-</td>
                 <td>Wrapping up the proof</td>
             </tr>
-            <tr>
+            <tr class ="group-closed">
                 <td>14 April</td>
                 <td>10:00 - 12:00</td>  
                 <td>BW.0.32</td>
